@@ -9,6 +9,14 @@ public class Main {
         System.out.print("Введите число доменов: ");
         int dom = in.nextInt();
         int selectCount = 8;
+        String[] selectedArr = new String[dom];
+        String[] srcArr = {"S", "T", "A", "R"};
+        Random rnd = new Random();
+
+        //Создание доменов
+        for (int k = 0; k < dom; k++) {
+            selectedArr[k] ="";
+            int bd = rnd.nextInt(selectCount)+2;
             for (int i = 0; i < bd; i++) {
                 selectedArr[k] += srcArr[rnd.nextInt(srcArr.length)];
             }
